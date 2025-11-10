@@ -4,12 +4,12 @@ from app.split_integer import split_integer
 
 
 @pytest.mark.parametrize(
-   "value, parts, expected_sum",
-   [
-       (8, 1, 8),
-       (6, 2, 6),
-       (32, 6, 32)
-   ]
+    "value, parts, expected_sum",
+    [
+        (8, 1, 8),
+        (6, 2, 6),
+        (32, 6, 32),
+    ],
 )
 def test_sum_of_the_parts_should_be_equal_to_value(
         value: int,
@@ -18,7 +18,7 @@ def test_sum_of_the_parts_should_be_equal_to_value(
 ) -> None:
     result = split_integer(value, parts)
 
-    assert  len(result) == parts
+    assert len(result) == parts
     assert sum(result) == expected_sum
 
 
