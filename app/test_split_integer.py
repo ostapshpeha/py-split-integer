@@ -16,10 +16,7 @@ def test_sum_of_the_parts_should_be_equal_to_value(
         parts: int,
         expected_sum: int
 ) -> None:
-    result = split_integer(value, parts)
-
-    assert len(result) == parts
-    assert sum(result) == expected_sum
+    assert split_integer(value, parts) == expected_sum
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
